@@ -1,0 +1,39 @@
+$primary-color: #3c12d6;
+@import 'switch.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.material-icons {
+  font-size: 48px;
+}
+
+.inline {
+  display: inline;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 15px;
+}
