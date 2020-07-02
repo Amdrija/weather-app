@@ -41,6 +41,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.ico$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '',
+            },
+          },
+        ],
+      },
+      {
         test: /.s[c|a]ss$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       },

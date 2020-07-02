@@ -5,7 +5,7 @@
         <h1 class="card-city">{{ location }}</h1>
         <div class="card-weather align-vertical-center">
           <h3 class="card-temperature">{{ temperature }}°</h3>
-          <span class="material-icons">{{ icon }}</span>
+          <span class="material-icons md-48">{{ icon }}</span>
         </div>
       </div>
 

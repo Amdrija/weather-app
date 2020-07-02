@@ -107,10 +107,12 @@ export default {
       const local_timezone_offset = new Date().getTimezoneOffset() * 60;
 
       //have to use a minus because add operation is not defined for dates
-      let current_time = new Date(
+      let current_date = new Date(
         new Date() - (-local_timezone_offset - timezone) * 1000
       );
-      this.current_time = `${current_time.getHours()}:${current_time.getMinutes()}`;
+      //we are slicing the last 3 characters, ebcase toLocateTimeString
+      //returns a string in format HH:MM:SS
+      this.current_time = current_date.toLocaleTimeString('en-GB').slice(0, -3);
       return this.current_time;
     },
     setWeatherIcon: function(weather_description) {
