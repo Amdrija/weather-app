@@ -50,7 +50,7 @@ export default {
     getWeatherCoordinates(position) {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.getApiKey()}`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.getApiKey()}`;
       fetch(url, { mode: 'cors' })
         .then(function(response) {
           if (response.status == 200) {
@@ -67,7 +67,7 @@ export default {
     getWeather: function() {
       let city = this.$refs.cityInput.value;
       if (city) {
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.getApiKey()}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.getApiKey()}`;
         fetch(url, { mode: 'cors' })
           .then(function(response) {
             if (response.status == 200) {
